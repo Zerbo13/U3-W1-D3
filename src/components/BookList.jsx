@@ -1,20 +1,21 @@
 import { Component } from 'react';
-import fantasy from '../data/fantasy.json';
+import romance from '../data/romance.json';
 import { Col, Container, Row } from 'react-bootstrap';
-import SingleBook from './SingleBook';
+import SingleBooks from './SingleBooks';
+
 class BookList extends Component {
 render() {
 return(
 <Container>
 <Row>
 {
-fantasy.map((book) => {
+romance.map((book) => {
 return (
-<SingleBook
-title={book.title}
-imgUrl={book.img}
-description={book.category}
-/>
+ <SingleBooks
+ title={book.title}
+ imgUrl={book.img}
+ description={book.category}
+ />
 )})
 }
 </Row>
